@@ -154,3 +154,19 @@ list.c:112:12: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 bc401bf
+Sun 30 Mar 2025 01:21:03 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:113:19: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  113 |     void * data = current->data;
+      |                   ^~~~~~~
+      |                   popCurrent
+list.c:113:19: note: each undeclared identifier is reported only once for each function it appears in
+list.c:112:12: error: unused variable ‘aux’ [-Werror=unused-variable]
+  112 |     Node * aux = list->current;
+      |            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+2cec68e
