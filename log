@@ -44,3 +44,12 @@ Sun 30 Mar 2025 01:04:42 AM UTC:
  tests:  10|2
 total_score: 45/70
 4385e2e
+Sun 30 Mar 2025 01:07:34 AM UTC: 
+ list.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+In file included from test.c:5:
+list.c:98:1: error: expected identifier or ‘(’ before ‘}’ token
+   98 | }
+      | ^
+Compilation failed
+2ced505
