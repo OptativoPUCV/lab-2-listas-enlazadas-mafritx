@@ -85,3 +85,26 @@ list.c:112:12: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 749dc65
+Sun 30 Mar 2025 01:15:08 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:110:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  110 |     if (list == NULL || list->current == NULL) return NULL;)
+      |     ^~
+list.c:110:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  110 |     if (list == NULL || list->current == NULL) return NULL;)
+      |                                                            ^
+list.c:110:60: error: expected statement before ‘)’ token
+list.c:113:19: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  113 |     void * data = current->data;
+      |                   ^~~~~~~
+      |                   popCurrent
+list.c:113:19: note: each undeclared identifier is reported only once for each function it appears in
+list.c:112:12: error: unused variable ‘aux’ [-Werror=unused-variable]
+  112 |     Node * aux = list->current;
+      |            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+5dc8486
